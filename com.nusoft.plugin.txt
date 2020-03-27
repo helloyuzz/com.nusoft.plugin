@@ -1,0 +1,2 @@
+apk:		android
+com.nusoft.plugin:	vscode_cordova plugin
