@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
+        id="com.nusoft.plugin"
+        version="1.0.0">
+
+  <name>NusoftScanner</name>
+
+  <engines>
+    <engine name="cordova" version=">=3.4.0"/>
+  </engines>
+
+  <asset src="www/nusoftscanner.js" target="js/nusoftscanner.js"/>
+
+  <js-module src="www/nusoftscanner.js" name="nusoftscanner">
+    <clobbers target="nusoftscanner" />
+  </js-module>
+
+  <platform name="android">
+    <config-file target="res/xml/config.xml" parent="/*">
+      <feature name="NusoftScanner">
+        <param name="android-package" value="com.nusoft.plugin.NusoftScanner"/>
+      </feature>
+    </config-file>
+
+    <source-file src="src/android/NusoftScanner.java" target-dir="src/com/nusoft/plugin/"/>
+    <source-file src="src/android/NusoftReceiver.java" target-dir="src/com/nusoft/plugin/"/>
+    <source-file src="libs/android-support-v4.jar" target-dir="src/main/libs"/>
+    <source-file src="libs/classes.jar" target-dir="src/main/libs"/>
+  </platform>
+
+</plugin>
