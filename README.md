@@ -1,2 +1,2 @@
 # com.nusoft.plugin
-东软PDA适配插件
+基于Java、Android实现，东软PDA扫描适配插件。
